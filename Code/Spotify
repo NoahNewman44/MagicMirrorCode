@@ -1,0 +1,144 @@
+/*Spotify Customized Look*/
+:root {
+  --card-width: 320px;
+  --bg-dark: #0b0f15;
+  --text-main: #fff;
+  --text-secondary: #aaa;
+  --control-bg: rgba(255,255,255,0.1);
+  --control-bg-hover: rgba(255,255,255,0.2);
+  --play-btn-size: 50px;
+  font-family: 'Spotify Circular', 'Inter', sans-serif;
+}
+
+#SPOTIFY {
+  width: var(--card-width);
+  background: linear-gradient(180deg, rgba(10,14,20,0.9), rgba(10,14,20,1));
+  border-radius: 16px;
+  padding: 16px;
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* SONG TITLE + ARTIST */
+#SPOTIFY_TITLE {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+#SPOTIFY_ARTIST {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* ALBUM ART */
+#SPOTIFY_COVER {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+#SPOTIFY_COVER_IMAGE {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTROLS BAR BELOW */
+#SPOTIFY_CONTROL {
+  background: var(--control-bg);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  width: 90%;
+  margin-bottom: 12px;
+}
+
+/* Skip/Prev */
+#SPOTIFY_CONTROL .control-btn {
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#SPOTIFY_CONTROL .control-btn:hover {
+  color: #1DB954; /* Spotify green hover */
+}
+
+/* Center Play Button */
+#SPOTIFY_CONTROL .play-btn {
+  background: #fff;
+  color: #000;
+  font-size: 24px;
+  width: var(--play-btn-size);
+  height: var(--play-btn-size);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+#SPOTIFY_CONTROL .play-btn:hover {
+  transform: scale(1.05);
+}
+
+/* PROGRESS BAR (optional at bottom) */
+#SPOTIFY_PROGRESS_BAR {
+  width: 90%;
+  height: 4px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 2px;
+  margin-bottom: 4px;
+}
+
+progress[value]#SPOTIFY_PROGRESS_BAR::-webkit-progress-value {
+  background: #fff;
+  border-radius: 2px;
+}
+
+progress[value]#SPOTIFY_PROGRESS_BAR::-webkit-progress-bar {
+  background: transparent;
+}
+
+#SPOTIFY_PROGRESS_TIME {
+  width: 90%;
+  font-size: 11px;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* HIDE album name completely */
+#SPOTIFY_ALBUM {
+  display: none !important;
+}
+
+/* SONG TITLE */
+#SPOTIFY_TITLE {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+/* ONLY ARTIST BELOW */
+#SPOTIFY_ARTIST {
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
