@@ -1,0 +1,32 @@
+/* global WeatherProvider, WeatherObject */
+
+/*
+ * This class is a provider for Openweathermap,
+ * see https://openweathermap.org/
+ */
+WeatherProvider.register("openweathermap", {
+
+	/*
+	 * Set the name of the provider.
+	 * This isn't strictly necessary, since it will fallback to the provider identifier
+	 * But for debugging (and future alerts) it would be nice to have the real name.
+	 */
+	providerName: "OpenWeatherMap",
+
+	// Set the default config properties that is specific to this provider
+	defaults: {
+		apiVersion: "2.5",
+		apiBase: "https://api.openweathermap.org/data/",
+		// weatherEndpoint is "/onecall" since API 3.0
+		// "/onecall", "/forecast" or "/weather" only for pro customers
+		locationID: false,
+		location: "Hayward, US",
+		lat:"37.6688", // Default location for Hayward, CA
+		lon:"-122.0808", // Default location for Hayward, CA
+		type: "hourly", // current, hourly, daily, forecast
+		lang: "en", // Language for the weather information
+		apiKey: "aa2234ec090366bc33f21dc68db7dc3c0",	
+		units: "imperial", // OpenWeatherMap uses imperial internally, so we use metric for the WeatherObjects
+       
+	},
+
